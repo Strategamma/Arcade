@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#07060d">
+  <meta name="theme-color" content="#030203">
   <meta name="description" content="Decadence Inc. — original strategy games for sharp minds and long rivalries.">
   <title>Decadence Inc. — The Arcade</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307060d'/%3E%3Cpath d='M19 15h18c9 0 15 7 15 17S46 49 37 49H19V15Zm11 10v14h6c4 0 6-3 6-7s-2-7-6-7h-6Z' fill='%23ffdc58'/%3E%3Cpath d='M12 20h6v24h-6z' fill='%23ff3f8e'/%3E%3C/svg%3E">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23030203'/%3E%3Cpath d='M19 15h18c9 0 15 7 15 17S46 49 37 49H19V15Zm11 10v14h6c4 0 6-3 6-7s-2-7-6-7h-6Z' fill='%23ff5667'/%3E%3Cpath d='M12 20h6v24h-6z' fill='%23ef233c'/%3E%3C/svg%3E">
   <style>
     :root {
-      --ink: #07060d;
-      --paper: #f5f0df;
-      --pink: #ff3f8e;
-      --yellow: #ffdc58;
-      --blue: #56c9ff;
-      --violet: #8c5cff;
-      --muted: #a5a2b4;
+      --ink: #030203;
+      --paper: #f7eded;
+      --pink: #ef233c;
+      --yellow: #ff5667;
+      --blue: #d22f49;
+      --violet: #8b1028;
+      --muted: #aa969a;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -27,8 +27,8 @@
       min-width: 320px;
       color: var(--paper);
       background:
-        radial-gradient(circle at 75% 8%, rgba(140,92,255,.22), transparent 28rem),
-        radial-gradient(circle at 12% 30%, rgba(255,63,142,.14), transparent 30rem),
+        radial-gradient(circle at 75% 8%, rgba(139,16,40,.3), transparent 28rem),
+        radial-gradient(circle at 12% 30%, rgba(239,35,60,.16), transparent 30rem),
         var(--ink);
       font: 500 1rem/1.55 "DM Sans", system-ui, sans-serif;
       overflow-x: hidden;
@@ -59,7 +59,7 @@
     .game-menu summary::-webkit-details-marker { display: none; }
     .game-menu summary::after { content: "\2193"; margin-left: 7px; font-size: .75em; }
     .game-menu[open] summary, .game-menu summary:hover, .game-menu summary:focus-visible { color: white; background: rgba(255,255,255,.08); outline: none; }
-    .game-menu-links { position: absolute; top: calc(100% + 8px); right: 0; z-index: 10; width: 220px; padding: 8px; border: 1px solid rgba(255,255,255,.14); border-radius: 12px; background: #15131e; box-shadow: 0 18px 45px rgba(0,0,0,.4); }
+    .game-menu-links { position: absolute; top: calc(100% + 8px); right: 0; z-index: 10; width: 220px; padding: 8px; border: 1px solid rgba(239,35,60,.24); border-radius: 12px; background: #110709; box-shadow: 0 18px 45px rgba(0,0,0,.55); }
     .game-menu-links a { display: block; padding: 10px 12px; border-radius: 7px; color: #d9d5e3; text-decoration: none; font-size: .88rem; }
     .game-menu-links a:hover, .game-menu-links a:focus-visible { color: var(--ink); background: var(--yellow); outline: none; }
     .live-pill { display: flex; align-items: center; gap: 8px; padding: 9px 13px; border: 1px solid rgba(255,255,255,.14); border-radius: 999px; font-size: .8rem; color: #d9d5e3; }
@@ -75,7 +75,7 @@
     .coin-button { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 12px; min-height: 54px; padding: 0 22px; color: var(--ink); background: var(--yellow); border: 0; border-radius: 4px; font: 700 .9rem "DM Sans", sans-serif; text-decoration: none; text-transform: uppercase; letter-spacing: .08em; box-shadow: 6px 6px 0 var(--pink); transition: transform .16s ease, box-shadow .16s ease; }
     .coin-button:hover, .coin-button:focus-visible { transform: translate(3px,3px); box-shadow: 3px 3px 0 var(--pink); outline: none; }
     .coin { width: 24px; height: 24px; display: grid; place-items: center; border: 2px solid currentColor; border-radius: 50%; font-size: .7rem; }
-    .marquee { overflow: hidden; border-block: 1px solid rgba(255,255,255,.1); background: rgba(255,255,255,.025); }
+    .marquee { overflow: hidden; border-block: 1px solid rgba(239,35,60,.18); background: rgba(139,16,40,.08); }
     .marquee-track { display: flex; width: max-content; padding: 13px 0; animation: crawl 25s linear infinite; }
     .marquee span { display: flex; align-items: center; gap: 20px; padding-right: 20px; color: #d0ccda; font: 400 .76rem "Archivo Black", sans-serif; letter-spacing: .12em; text-transform: uppercase; }
     .marquee i { width: 7px; height: 7px; background: var(--pink); transform: rotate(45deg); }
@@ -89,9 +89,10 @@
     .cabinet { position: relative; min-height: 500px; padding: 24px; border: 1px solid rgba(255,255,255,.12); border-radius: 18px; overflow: hidden; isolation: isolate; transition: transform .22s ease, border-color .22s ease; }
     .cabinet:hover { transform: translateY(-7px); border-color: rgba(255,255,255,.3); }
     .cabinet::after { content: ""; position: absolute; inset: 0; z-index: -1; opacity: .18; background: repeating-linear-gradient(0deg, transparent 0 5px, white 6px); mix-blend-mode: overlay; }
-    .cabinet.stackup { grid-column: span 7; background: linear-gradient(145deg, #27322f, #111715); }
-    .cabinet.barrier { grid-column: span 5; background: linear-gradient(145deg, #1c315c, #0b1326); }
-    .cabinet.sakura { grid-column: 3 / span 8; min-height: 420px; background: linear-gradient(145deg, #3f202b, #160c11); }
+    .cabinet.stackup { grid-column: span 6; background: linear-gradient(145deg, #271316, #0b0708); }
+    .cabinet.barrier { grid-column: span 6; background: linear-gradient(145deg, #291017, #090507); }
+    .cabinet.sakura { grid-column: span 6; background: linear-gradient(145deg, #35131d, #0d0608); }
+    .cabinet.spies { grid-column: span 6; background: linear-gradient(145deg, #24090e, #070405); }
     .cabinet-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; position: relative; z-index: 2; }
     .status { display: inline-flex; align-items: center; gap: 8px; min-height: 32px; padding: 0 11px; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; color: #dcd8e6; background: rgba(7,6,13,.25); font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
     .status.live { color: #85ffbd; }
@@ -102,13 +103,13 @@
     .cabinet:hover .game-art img { transform: scale(1.04) rotate(-1deg); }
     .stackup .game-art img { width: 164px; }
     .barrier .game-art img { width: 310px; max-width: 90%; }
-    .sakura .game-art { position: absolute; right: 4%; top: 72px; width: 38%; height: 220px; }
     .sakura .game-art img { width: 145px; }
+    .spies .game-art img { width: 250px; }
     .orb { position: absolute; width: 220px; height: 220px; border-radius: 50%; filter: blur(1px); opacity: .45; background: radial-gradient(circle at 40% 35%, white, var(--pink) 20%, transparent 67%); }
     .stackup .orb { background: radial-gradient(circle at 40% 35%, white, var(--yellow) 20%, transparent 67%); }
     .barrier .orb { background: radial-gradient(circle at 40% 35%, white, var(--blue) 20%, transparent 67%); }
+    .spies .orb { background: radial-gradient(circle at 40% 35%, #ffd8dc, #a10e27 24%, transparent 68%); }
     .game-info { position: relative; z-index: 2; }
-    .sakura .game-info { width: 58%; padding-top: 56px; }
     .game-title { margin: 0; font: 400 clamp(2rem, 4vw, 3.6rem)/.9 "Archivo Black", sans-serif; letter-spacing: -.05em; text-transform: uppercase; }
     .game-blurb { max-width: 470px; margin: 14px 0 20px; color: #bdb8ca; }
     .game-bottom { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
@@ -135,9 +136,6 @@
       .section-note { text-align: left; }
       .cabinet-grid { display: block; }
       .cabinet { min-height: 470px; margin-bottom: 20px; }
-      .cabinet.sakura { min-height: 470px; }
-      .sakura .game-art { position: relative; inset: auto; width: auto; height: 190px; }
-      .sakura .game-info { width: auto; padding-top: 0; }
       .manifesto { grid-template-columns: 1fr; gap: 24px; margin-top: 70px; }
     }
     @media (max-width: 480px) {
@@ -170,6 +168,7 @@
           <a href="https://stackup.decadenceinc.com">StackUp</a>
           <a href="https://strategamma.github.io/BarrierKnights/">Barrier Knights</a>
           <a href="https://strategamma.github.io/SakuraShowdown/">Sakura Showdown</a>
+          <a href="https://github.com/Strategamma/SpiesInDisguise">Spies in Disguise</a>
         </div>
       </details>
       <a class="nav-link" href="#about">About</a>
@@ -179,7 +178,7 @@
 
   <main id="top">
     <section class="shell hero" aria-labelledby="hero-title">
-      <div class="kicker">Three original games. Ready when you are.</div>
+      <div class="kicker">Four original games. Choose your cover.</div>
       <h1 id="hero-title"><span class="outline">Enter the</span><span class="hot">Decadence</span> Arcade</h1>
       <div class="hero-bottom">
         <p class="hero-copy">Pick a game, learn it in minutes, and play right in your browser. Solo, side by side, or online.</p>
@@ -217,7 +216,7 @@
           <div class="game-info">
             <h3 class="game-title">Barrier Knights</h3>
             <p class="game-blurb">Race for the far side. Raise walls, seize momentum, and always leave yourself one last path.</p>
-            <div class="game-bottom"><a class="play" href="https://strategamma.github.io/BarrierKnights/">Play Barrier Knights</a><span class="genre">Strategy · Solo & local</span></div>
+            <div class="game-bottom"><a class="play" href="https://strategamma.github.io/BarrierKnights/">Play Barrier Knights</a><span class="genre">Strategy · Solo &amp; local</span></div>
           </div>
         </article>
 
@@ -227,7 +226,17 @@
           <div class="game-info">
             <h3 class="game-title">Sakura Showdown</h3>
             <p class="game-blurb">Five pieces. Five cards. One perfect move. A tactical duel of shifting techniques and sudden victories.</p>
-            <div class="game-bottom"><a class="play" href="https://strategamma.github.io/SakuraShowdown/">Play Sakura Showdown</a><span class="genre">Tactics · Solo, local & online</span></div>
+            <div class="game-bottom"><a class="play" href="https://strategamma.github.io/SakuraShowdown/">Play Sakura Showdown</a><span class="genre">Tactics · Solo, local &amp; online</span></div>
+          </div>
+        </article>
+
+        <article class="cabinet spies">
+          <div class="cabinet-top"><span class="status">On GitHub</span><span class="players">New arrival</span></div>
+          <div class="game-art"><span class="orb" aria-hidden="true"></span><img src="assets/spies-in-disguise.svg" alt="Spies in Disguise game mark"></div>
+          <div class="game-info">
+            <h3 class="game-title">Spies in Disguise</h3>
+            <p class="game-blurb">Keep your cover, watch every move, and find out who is hiding in plain sight.</p>
+            <div class="game-bottom"><a class="play" href="https://github.com/Strategamma/SpiesInDisguise">View the game</a><span class="genre">Espionage · Strategy</span></div>
           </div>
         </article>
       </div>

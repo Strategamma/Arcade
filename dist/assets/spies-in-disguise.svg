@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 240" role="img" aria-labelledby="title desc">
+  <title id="title">Spies in Disguise</title>
+  <desc id="desc">A dark red spy silhouette with an eye and crosshair motif</desc>
+  <defs>
+    <linearGradient id="coat" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#ff5667"/>
+      <stop offset="1" stop-color="#8b1028"/>
+    </linearGradient>
+  </defs>
+  <circle cx="210" cy="107" r="78" fill="#080405" stroke="#ef233c" stroke-width="4"/>
+  <path d="M145 92h130l-21-18h-88z" fill="#f7eded"/>
+  <path d="M176 74c4-39 64-39 68 0z" fill="url(#coat)"/>
+  <path d="M155 171c9-40 32-60 55-60s46 20 55 60z" fill="url(#coat)"/>
+  <path d="M210 111l-15 60h30z" fill="#080405"/>
+  <path d="M174 103c10-8 22-8 32 0-10 8-22 8-32 0Zm40 0c10-8 22-8 32 0-10 8-22 8-32 0Z" fill="#f7eded"/>
+  <circle cx="190" cy="103" r="4" fill="#ef233c"/>
+  <circle cx="230" cy="103" r="4" fill="#ef233c"/>
+  <path d="M304 68v48M280 92h48" stroke="#ef233c" stroke-width="3"/>
+  <circle cx="304" cy="92" r="17" fill="none" stroke="#ef233c" stroke-width="3"/>
+  <text x="210" y="211" fill="#f7eded" font-family="Arial Black, sans-serif" font-size="25" text-anchor="middle" letter-spacing="2">SPIES IN DISGUISE</text>
+</svg>
