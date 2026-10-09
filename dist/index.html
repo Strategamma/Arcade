@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#030203">
-  <meta name="description" content="Decadence Inc. — original strategy games for sharp minds and long rivalries.">
-  <title>Decadence Inc. — The Arcade</title>
+  <meta name="theme-color" content="#120d0c">
+  <meta name="description" content="Decadence Arcade is bringing LAN gaming back—gather in one place, join the same network, and play together.">
+  <title>Decadence Arcade — Game Night Lives Here</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23030203'/%3E%3Cpath d='M19 15h18c9 0 15 7 15 17S46 49 37 49H19V15Zm11 10v14h6c4 0 6-3 6-7s-2-7-6-7h-6Z' fill='%23ff5667'/%3E%3Cpath d='M12 20h6v24h-6z' fill='%23ef233c'/%3E%3C/svg%3E">
   <style>
     :root {
-      --ink: #030203;
-      --paper: #f7eded;
-      --pink: #ef233c;
-      --yellow: #ff5667;
-      --blue: #d22f49;
-      --violet: #8b1028;
-      --muted: #aa969a;
+      --ink: #120d0c;
+      --paper: #fff7ec;
+      --pink: #f04444;
+      --yellow: #ffb84d;
+      --blue: #e76f51;
+      --violet: #8f2531;
+      --muted: #b9a9a0;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -27,8 +27,8 @@
       min-width: 320px;
       color: var(--paper);
       background:
-        radial-gradient(circle at 75% 8%, rgba(139,16,40,.3), transparent 28rem),
-        radial-gradient(circle at 12% 30%, rgba(239,35,60,.16), transparent 30rem),
+        radial-gradient(circle at 78% 8%, rgba(240,68,68,.2), transparent 30rem),
+        radial-gradient(circle at 10% 32%, rgba(255,184,77,.12), transparent 28rem),
         var(--ink);
       font: 500 1rem/1.55 "DM Sans", system-ui, sans-serif;
       overflow-x: hidden;
@@ -49,7 +49,7 @@
     .shell { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
     .topbar { height: 78px; display: flex; align-items: center; justify-content: space-between; }
     .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-family: "Archivo Black", sans-serif; letter-spacing: -.03em; }
-    .brand-mark { width: 36px; height: 36px; display: grid; place-items: center; color: var(--ink); background: var(--yellow); border-radius: 8px; box-shadow: 4px 4px 0 var(--pink); transform: rotate(-3deg); }
+    .brand-mark { width: 36px; height: 36px; display: grid; place-items: center; color: var(--ink); background: var(--yellow); border-radius: 10px; box-shadow: 4px 4px 0 var(--pink); transform: rotate(-3deg); }
     .brand span:last-child { font-size: 1.05rem; }
     .topbar nav { display: flex; align-items: center; gap: 8px; }
     .nav-link { color: var(--muted); text-decoration: none; padding: 10px 14px; border-radius: 999px; font-size: .9rem; }
@@ -62,12 +62,13 @@
     .game-menu-links { position: absolute; top: calc(100% + 8px); right: 0; z-index: 10; width: 220px; padding: 8px; border: 1px solid rgba(239,35,60,.24); border-radius: 12px; background: #110709; box-shadow: 0 18px 45px rgba(0,0,0,.55); }
     .game-menu-links a { display: block; padding: 10px 12px; border-radius: 7px; color: #d9d5e3; text-decoration: none; font-size: .88rem; }
     .game-menu-links a:hover, .game-menu-links a:focus-visible { color: var(--ink); background: var(--yellow); outline: none; }
-    .live-pill { display: flex; align-items: center; gap: 8px; padding: 9px 13px; border: 1px solid rgba(255,255,255,.14); border-radius: 999px; font-size: .8rem; color: #d9d5e3; }
+    .live-pill { display: flex; align-items: center; gap: 8px; padding: 9px 13px; border: 1px solid rgba(255,184,77,.22); border-radius: 999px; font-size: .8rem; color: #eadfd8; background: rgba(255,184,77,.05); }
     .live-dot { width: 8px; height: 8px; border-radius: 50%; background: #55ec9a; box-shadow: 0 0 14px #55ec9a; }
-    .hero { min-height: 70vh; display: grid; align-content: center; padding: 70px 0 90px; position: relative; }
+    .hero { min-height: 72vh; display: grid; align-content: center; padding: 70px 0 90px; position: relative; }
+    .hero::after { content: ""; position: absolute; right: 2%; top: 16%; width: min(30vw, 320px); aspect-ratio: 1.7; border: 2px solid rgba(255,184,77,.16); border-radius: 28px; box-shadow: 0 20px 70px rgba(240,68,68,.12), inset 0 -42px 0 rgba(255,255,255,.025); transform: rotate(4deg); pointer-events: none; }
     .kicker { display: flex; align-items: center; gap: 10px; color: var(--yellow); font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .18em; }
     .kicker::before { content: ""; width: 34px; height: 2px; background: currentColor; }
-    h1 { max-width: 900px; margin: 22px 0 24px; font: 400 clamp(4rem, 10vw, 9rem)/.83 "Archivo Black", sans-serif; letter-spacing: -.075em; text-transform: uppercase; }
+    h1 { max-width: 960px; margin: 22px 0 24px; font: 400 clamp(4rem, 9vw, 8.2rem)/.86 "Archivo Black", sans-serif; letter-spacing: -.075em; text-transform: uppercase; position: relative; z-index: 1; }
     h1 .outline { display: block; color: transparent; -webkit-text-stroke: 2px var(--paper); }
     h1 .hot { color: var(--pink); text-shadow: 5px 5px 0 #69224a; }
     .hero-bottom { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
@@ -75,43 +76,59 @@
     .coin-button { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 12px; min-height: 54px; padding: 0 22px; color: var(--ink); background: var(--yellow); border: 0; border-radius: 4px; font: 700 .9rem "DM Sans", sans-serif; text-decoration: none; text-transform: uppercase; letter-spacing: .08em; box-shadow: 6px 6px 0 var(--pink); transition: transform .16s ease, box-shadow .16s ease; }
     .coin-button:hover, .coin-button:focus-visible { transform: translate(3px,3px); box-shadow: 3px 3px 0 var(--pink); outline: none; }
     .coin { width: 24px; height: 24px; display: grid; place-items: center; border: 2px solid currentColor; border-radius: 50%; font-size: .7rem; }
+    .room-link { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: -1px; border-block: 1px solid rgba(255,184,77,.16); background: rgba(255,184,77,.16); }
+    .room-step { min-height: 142px; padding: 28px clamp(20px, 4vw, 44px); background: #17100f; }
+    .room-step span { display: block; margin-bottom: 8px; color: var(--yellow); font: 700 .72rem "DM Sans", sans-serif; letter-spacing: .15em; text-transform: uppercase; }
+    .room-step strong { display: block; color: var(--paper); font: 400 clamp(1.25rem, 2.2vw, 1.8rem)/1.05 "Archivo Black", sans-serif; text-transform: uppercase; }
+    .room-step p { margin: 8px 0 0; color: var(--muted); font-size: .9rem; }
     .marquee { overflow: hidden; border-block: 1px solid rgba(239,35,60,.18); background: rgba(139,16,40,.08); }
     .marquee-track { display: flex; width: max-content; padding: 13px 0; animation: crawl 25s linear infinite; }
     .marquee span { display: flex; align-items: center; gap: 20px; padding-right: 20px; color: #d0ccda; font: 400 .76rem "Archivo Black", sans-serif; letter-spacing: .12em; text-transform: uppercase; }
     .marquee i { width: 7px; height: 7px; background: var(--pink); transform: rotate(45deg); }
     @keyframes crawl { to { transform: translateX(-50%); } }
-    .games { padding: 110px 0 70px; }
+    .games { padding: clamp(74px, 9vw, 110px) 0 70px; }
     .section-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 40px; }
     .section-number { color: var(--pink); font-weight: 700; letter-spacing: .12em; }
     h2 { margin: 6px 0 0; font: 400 clamp(2.4rem, 6vw, 5rem)/.9 "Archivo Black", sans-serif; letter-spacing: -.055em; text-transform: uppercase; }
     .section-note { max-width: 350px; margin: 0; color: var(--muted); text-align: right; }
-    .cabinet-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 22px; }
-    .cabinet { position: relative; min-height: 500px; padding: 24px; border: 1px solid rgba(255,255,255,.12); border-radius: 18px; overflow: hidden; isolation: isolate; transition: transform .22s ease, border-color .22s ease; }
+    .catalog-tools { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin: -8px 0 28px; }
+    .filters { display: flex; flex-wrap: wrap; gap: 8px; }
+    .filter { min-height: 42px; padding: 0 16px; color: var(--muted); background: rgba(255,255,255,.035); border: 1px solid rgba(255,255,255,.13); border-radius: 999px; font: 700 .76rem "DM Sans", sans-serif; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
+    .filter:hover, .filter:focus-visible { color: white; border-color: rgba(255,184,77,.5); outline: none; }
+    .filter[aria-pressed="true"] { color: var(--ink); background: var(--yellow); border-color: var(--yellow); }
+    .catalog-count { flex: 0 0 auto; margin: 0; color: var(--muted); font-size: .82rem; }
+    .cabinet-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; align-items: stretch; }
+    .cabinet { position: relative; min-width: 0; min-height: 420px; padding: 20px; border: 1px solid rgba(255,255,255,.12); border-radius: 16px; overflow: hidden; isolation: isolate; transition: transform .22s ease, border-color .22s ease; }
+    .cabinet[hidden] { display: none; }
     .cabinet:hover { transform: translateY(-7px); border-color: rgba(255,255,255,.3); }
     .cabinet::after { content: ""; position: absolute; inset: 0; z-index: -1; opacity: .18; background: repeating-linear-gradient(0deg, transparent 0 5px, white 6px); mix-blend-mode: overlay; }
-    .cabinet.stackup { grid-column: span 6; background: linear-gradient(145deg, #271316, #0b0708); }
-    .cabinet.barrier { grid-column: span 6; background: linear-gradient(145deg, #291017, #090507); }
-    .cabinet.sakura { grid-column: span 6; background: linear-gradient(145deg, #35131d, #0d0608); }
-    .cabinet.spies { grid-column: span 6; background: linear-gradient(145deg, #24090e, #070405); }
+    .cabinet.stackup { background: linear-gradient(145deg, #36201b, #100b0a); }
+    .cabinet.barrier { background: linear-gradient(145deg, #34201d, #100a09); }
+    .cabinet.sakura { background: linear-gradient(145deg, #3c1e22, #130a0b); }
+    .cabinet.spies { background: linear-gradient(145deg, #32171a, #0e0808); }
+    .cabinet.scarlet { background: linear-gradient(145deg, #4a171b, #150908); }
     .cabinet-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; position: relative; z-index: 2; }
     .status { display: inline-flex; align-items: center; gap: 8px; min-height: 32px; padding: 0 11px; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; color: #dcd8e6; background: rgba(7,6,13,.25); font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
     .status.live { color: #85ffbd; }
     .status.live::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; box-shadow: 0 0 11px currentColor; }
-    .players { color: rgba(255,255,255,.62); font-size: .8rem; }
-    .game-art { height: 235px; display: grid; place-items: center; margin: 14px 0 6px; position: relative; }
-    .game-art img { display: block; max-width: min(82%, 340px); max-height: 200px; filter: drop-shadow(0 20px 26px rgba(0,0,0,.45)); transition: transform .28s ease; }
+    .players { color: rgba(255,255,255,.62); font-size: .76rem; white-space: nowrap; }
+    .class-tag { display: inline-flex; align-items: center; min-height: 27px; margin-bottom: 10px; padding: 0 9px; color: var(--yellow); border: 1px solid rgba(255,184,77,.25); border-radius: 999px; background: rgba(255,184,77,.06); font-size: .66rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .game-art { height: 180px; display: grid; place-items: center; margin: 10px 0 2px; position: relative; }
+    .game-art img { display: block; max-width: min(80%, 280px); max-height: 155px; filter: drop-shadow(0 20px 26px rgba(0,0,0,.45)); transition: transform .28s ease; }
     .cabinet:hover .game-art img { transform: scale(1.04) rotate(-1deg); }
-    .stackup .game-art img { width: 164px; }
-    .barrier .game-art img { width: 310px; max-width: 90%; }
-    .sakura .game-art img { width: 145px; }
-    .spies .game-art img { width: 250px; }
-    .orb { position: absolute; width: 220px; height: 220px; border-radius: 50%; filter: blur(1px); opacity: .45; background: radial-gradient(circle at 40% 35%, white, var(--pink) 20%, transparent 67%); }
+    .stackup .game-art img { width: 130px; }
+    .barrier .game-art img { width: 240px; max-width: 90%; }
+    .sakura .game-art img { width: 118px; }
+    .spies .game-art img { width: 205px; }
+    .scarlet .game-art img { width: 190px; }
+    .orb { position: absolute; width: 175px; height: 175px; border-radius: 50%; filter: blur(1px); opacity: .45; background: radial-gradient(circle at 40% 35%, white, var(--pink) 20%, transparent 67%); }
     .stackup .orb { background: radial-gradient(circle at 40% 35%, white, var(--yellow) 20%, transparent 67%); }
     .barrier .orb { background: radial-gradient(circle at 40% 35%, white, var(--blue) 20%, transparent 67%); }
     .spies .orb { background: radial-gradient(circle at 40% 35%, #ffd8dc, #a10e27 24%, transparent 68%); }
+    .scarlet .orb { background: radial-gradient(circle at 40% 35%, #fff0d2, #d72f3f 24%, transparent 68%); }
     .game-info { position: relative; z-index: 2; }
-    .game-title { margin: 0; font: 400 clamp(2rem, 4vw, 3.6rem)/.9 "Archivo Black", sans-serif; letter-spacing: -.05em; text-transform: uppercase; }
-    .game-blurb { max-width: 470px; margin: 14px 0 20px; color: #bdb8ca; }
+    .game-title { margin: 0; font: 400 clamp(1.7rem, 2.6vw, 2.6rem)/.92 "Archivo Black", sans-serif; letter-spacing: -.05em; text-transform: uppercase; overflow-wrap: anywhere; }
+    .game-blurb { max-width: 470px; margin: 11px 0 16px; color: #bdb8ca; font-size: .92rem; }
     .game-bottom { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
     .play { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 19px; color: var(--ink); background: white; border-radius: 4px; text-decoration: none; font-size: .82rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
     .play:hover, .play:focus-visible { background: var(--yellow); outline: none; }
@@ -125,29 +142,53 @@
     footer strong { color: #d7d3dd; }
     .key-hint { display: inline-flex; gap: 6px; }
     kbd { min-width: 27px; padding: 3px 7px; color: #bcb7c7; background: #17151f; border: 1px solid #35313f; border-bottom-width: 3px; border-radius: 5px; font: inherit; text-align: center; }
-    @media (max-width: 820px) {
-      .shell { width: min(100% - 28px, 680px); }
+    @media (max-width: 1020px) {
+      .shell { width: min(100% - 36px, 860px); }
+      .cabinet-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .cabinet { min-height: 410px; }
+      .hero { min-height: auto; }
+    }
+    @media (max-width: 720px) {
+      .shell { width: min(100% - 28px, 620px); }
       .topbar { height: 68px; }
       .nav-link { display: none; }
       .game-menu .nav-link { display: block; }
       .hero { min-height: auto; padding: 80px 0 90px; }
-      h1 { font-size: clamp(3.8rem, 18vw, 7rem); }
+      .hero::after { opacity: .45; right: -10%; top: 22%; width: 260px; }
+      h1 { font-size: clamp(3.4rem, 16vw, 6.5rem); }
       .hero-bottom, .section-head { align-items: flex-start; flex-direction: column; }
       .section-note { text-align: left; }
-      .cabinet-grid { display: block; }
-      .cabinet { min-height: 470px; margin-bottom: 20px; }
+      .catalog-tools { align-items: flex-start; flex-direction: column; gap: 12px; }
+      .cabinet-grid { grid-template-columns: 1fr; gap: 14px; }
+      .cabinet { min-height: 0; }
+      .room-link { grid-template-columns: 1fr; }
+      .room-step { min-height: auto; padding: 22px 28px; }
       .manifesto { grid-template-columns: 1fr; gap: 24px; margin-top: 70px; }
     }
     @media (max-width: 480px) {
+      .shell { width: calc(100% - 22px); }
+      .brand span:last-child { font-size: .92rem; }
       .live-pill { display: none; }
-      h1 { font-size: 3.65rem; }
+      .hero { padding: 58px 0 68px; }
+      h1 { font-size: clamp(3rem, 16.5vw, 3.8rem); }
       h1 .outline { -webkit-text-stroke-width: 1px; }
       .hero-bottom { align-items: stretch; }
       .coin-button { justify-content: center; }
-      .games { padding-top: 78px; }
-      .cabinet { padding: 18px; min-height: 455px; }
-      .game-title { font-size: 2.2rem; }
-      .game-art { height: 220px; }
+      .games { padding-top: 64px; }
+      .section-head { margin-bottom: 28px; }
+      .filters { flex-wrap: nowrap; width: calc(100vw - 22px); padding: 0 11px 4px; margin-left: -11px; overflow-x: auto; scrollbar-width: none; }
+      .filters::-webkit-scrollbar { display: none; }
+      .filter { flex: 0 0 auto; min-height: 44px; }
+      .cabinet { padding: 16px; border-radius: 14px; }
+      .cabinet-top { gap: 8px; }
+      .status { min-height: 29px; padding: 0 9px; font-size: .64rem; }
+      .players { font-size: .7rem; }
+      .game-art { height: 145px; margin-top: 8px; }
+      .game-art img { max-height: 125px; }
+      .orb { width: 140px; height: 140px; }
+      .game-title { font-size: 1.9rem; }
+      .game-blurb { font-size: .88rem; line-height: 1.45; }
+      .play { width: 100%; min-height: 44px; }
       footer { align-items: flex-start; flex-direction: column; justify-content: center; }
       .key-hint { display: none; }
     }
@@ -169,88 +210,140 @@
           <a href="https://strategamma.github.io/BarrierKnights/">Barrier Knights</a>
           <a href="https://strategamma.github.io/SakuraShowdown/">Sakura Showdown</a>
           <a href="https://strategamma.github.io/SpiesInDisguise/">Spies in Disguise</a>
+          <a href="https://scarlet-seal.onrender.com/">Scarlet Seal</a>
         </div>
       </details>
       <a class="nav-link" href="#about">About</a>
-      <span class="live-pill"><span class="live-dot"></span><span>4 games live</span></span>
+      <span class="live-pill"><span class="live-dot"></span><span>5 games live</span></span>
     </nav>
   </header>
 
   <main id="top">
     <section class="shell hero" aria-labelledby="hero-title">
-      <div class="kicker">Four original games. Choose your cover.</div>
-      <h1 id="hero-title"><span class="outline">Enter the</span><span class="hot">Decadence</span> Arcade</h1>
+      <div class="kicker">Bringing LAN gaming back</div>
+      <h1 id="hero-title"><span class="outline">Bring home</span><span class="hot">game night</span></h1>
       <div class="hero-bottom">
-        <p class="hero-copy">Pick a game, learn it in minutes, and play right in your browser. Solo, side by side, or online.</p>
-        <a class="coin-button" href="#games"><span class="coin">1P</span>See all games</a>
+        <p class="hero-copy">Decadence Arcade is a platform built to bring LAN gaming back. Get everyone together, join the same network, and turn the devices already in the room into one shared arcade.</p>
+        <a class="coin-button" href="#games"><span class="coin">4P</span>Start game night</a>
       </div>
+    </section>
+
+    <section class="room-link" aria-label="How home game night works">
+      <div class="room-step"><span>01 · Gather</span><strong>Bring your people</strong><p>Friends, family, rivals—and a screen for everyone.</p></div>
+      <div class="room-step"><span>02 · Connect</span><strong>Share the Wi-Fi</strong><p>Everyone joins from the same room and the same network.</p></div>
+      <div class="room-step"><span>03 · Play</span><strong>Pick a game</strong><p>Open a game, pass the snacks, and settle the score.</p></div>
     </section>
 
     <div class="marquee" aria-hidden="true">
       <div class="marquee-track">
-        <span><i></i> Stack clever <i></i> Break barriers <i></i> Master the board <i></i> Play together <i></i> Think twice </span>
-        <span><i></i> Stack clever <i></i> Break barriers <i></i> Master the board <i></i> Play together <i></i> Think twice </span>
+        <span><i></i> One room <i></i> One network <i></i> Pick your crowd <i></i> Everyone plays <i></i> Rematch ready </span>
+        <span><i></i> One room <i></i> One network <i></i> Pick your crowd <i></i> Everyone plays <i></i> Rematch ready </span>
       </div>
     </div>
 
     <section class="shell games" id="games" aria-labelledby="games-title">
       <div class="section-head">
-        <div><div class="section-number">01 / PLAY</div><h2 id="games-title">Pick your game</h2></div>
-        <p class="section-note">Every game is free to play in your browser. Choose one and jump straight in.</p>
+        <div><div class="section-number">01 / TONIGHT'S LINEUP</div><h2 id="games-title">Pick the room's game</h2></div>
+        <p class="section-note">No console handoff. Everyone opens the game on their own device and stays part of the action.</p>
+      </div>
+
+      <div class="catalog-tools">
+        <div class="filters" role="group" aria-label="Filter games by player count">
+          <button class="filter" type="button" data-filter="all" aria-pressed="true">All games</button>
+          <button class="filter" type="button" data-filter="duel" aria-pressed="false">Duel · 2 players</button>
+          <button class="filter" type="button" data-filter="table" aria-pressed="false">Table · 3–5</button>
+          <button class="filter" type="button" data-filter="party" aria-pressed="false">Party · 6+</button>
+        </div>
+        <p class="catalog-count" aria-live="polite"><span id="visible-count">5</span> games shown</p>
       </div>
 
       <div class="cabinet-grid">
-        <article class="cabinet stackup">
+        <article class="cabinet stackup" data-category="party">
           <div class="cabinet-top"><span class="status live">Live now</span><span class="players">2–8 players</span></div>
           <div class="game-art"><span class="orb" aria-hidden="true"></span><img src="assets/stackup.svg" alt="StackUp game mark"></div>
           <div class="game-info">
+            <span class="class-tag">Party</span>
             <h3 class="game-title">StackUp</h3>
             <p class="game-blurb">Read the room, play the number, dodge the penalty. A fast multiplayer card clash where every stack fights back.</p>
             <div class="game-bottom"><a class="play" href="https://stackup.decadenceinc.com">Play StackUp</a><span class="genre">Cards · Online</span></div>
           </div>
         </article>
 
-        <article class="cabinet barrier">
+        <article class="cabinet barrier" data-category="duel">
           <div class="cabinet-top"><span class="status live">Live now</span><span class="players">1–2 players</span></div>
           <div class="game-art"><span class="orb" aria-hidden="true"></span><img src="assets/barrier-knights.svg" alt="Barrier Knights logo"></div>
           <div class="game-info">
+            <span class="class-tag">Duel</span>
             <h3 class="game-title">Barrier Knights</h3>
             <p class="game-blurb">Race for the far side. Raise walls, seize momentum, and always leave yourself one last path.</p>
             <div class="game-bottom"><a class="play" href="https://strategamma.github.io/BarrierKnights/">Play Barrier Knights</a><span class="genre">Strategy · Solo &amp; local</span></div>
           </div>
         </article>
 
-        <article class="cabinet sakura">
+        <article class="cabinet sakura" data-category="duel">
           <div class="cabinet-top"><span class="status live">Live now</span><span class="players">1–2 players</span></div>
           <div class="game-art"><span class="orb" aria-hidden="true"></span><img src="assets/sakura.svg" alt="Sakura Showdown flower mark"></div>
           <div class="game-info">
+            <span class="class-tag">Duel</span>
             <h3 class="game-title">Sakura Showdown</h3>
             <p class="game-blurb">Five pieces. Five cards. One perfect move. A tactical duel of shifting techniques and sudden victories.</p>
             <div class="game-bottom"><a class="play" href="https://strategamma.github.io/SakuraShowdown/">Play Sakura Showdown</a><span class="genre">Tactics · Solo, local &amp; online</span></div>
           </div>
         </article>
 
-        <article class="cabinet spies">
-          <div class="cabinet-top"><span class="status live">Live now</span><span class="players">New arrival</span></div>
+        <article class="cabinet spies" data-category="duel">
+          <div class="cabinet-top"><span class="status live">Live now</span><span class="players">2 players</span></div>
           <div class="game-art"><span class="orb" aria-hidden="true"></span><img src="assets/spies-in-disguise.svg" alt="Spies in Disguise game mark"></div>
           <div class="game-info">
+            <span class="class-tag">Duel</span>
             <h3 class="game-title">Spies in Disguise</h3>
             <p class="game-blurb">Keep your cover, watch every move, and find out who is hiding in plain sight.</p>
             <div class="game-bottom"><a class="play" href="https://strategamma.github.io/SpiesInDisguise/">Play Spies in Disguise</a><span class="genre">Espionage · Strategy</span></div>
           </div>
         </article>
+
+        <article class="cabinet scarlet" data-category="party">
+          <div class="cabinet-top"><span class="status live">Live now</span><span class="players">1–6 players</span></div>
+          <div class="game-art"><span class="orb" aria-hidden="true"></span><img src="assets/scarlet-seal.svg" alt="Scarlet Seal wax seal and envelope mark"></div>
+          <div class="game-info">
+            <span class="class-tag">Party</span>
+            <h3 class="game-title">Scarlet Seal</h3>
+            <p class="game-blurb">Carry a secret through the court, read your rivals, and protect the one card that could win—or expose—you. Play solo with bots or gather a room on the same Wi-Fi.</p>
+            <div class="game-bottom"><a class="play" href="https://scarlet-seal.onrender.com/">Play Scarlet Seal</a><span class="genre">Cards · Same-Wi-Fi</span></div>
+          </div>
+        </article>
       </div>
 
       <section class="manifesto" id="about" aria-labelledby="about-title">
-        <div class="manifesto-label">02 / Our rule</div>
-        <p id="about-title">Easy to enter. Hard to leave. Every game should earn a <em>rematch.</em></p>
+        <div class="manifesto-label">02 / Our mission</div>
+        <p id="about-title">Bring LAN gaming back—one network, one room, and <em>everyone together.</em></p>
       </section>
     </section>
   </main>
 
   <footer class="shell">
-    <span><strong>Decadence Inc.</strong> Independent games for wonderfully competitive people.</span>
+    <span><strong>Decadence Arcade.</strong> The platform bringing LAN gaming back.</span>
     <span class="key-hint"><kbd>↑</kbd><kbd>↓</kbd> explore</span>
   </footer>
+  <script>
+    const filters = document.querySelectorAll(".filter");
+    const games = document.querySelectorAll(".cabinet[data-category]");
+    const visibleCount = document.querySelector("#visible-count");
+
+    filters.forEach((filter) => {
+      filter.addEventListener("click", () => {
+        const selected = filter.dataset.filter;
+        let count = 0;
+
+        filters.forEach((item) => item.setAttribute("aria-pressed", String(item === filter)));
+        games.forEach((game) => {
+          const visible = selected === "all" || game.dataset.category === selected;
+          game.hidden = !visible;
+          if (visible) count += 1;
+        });
+        visibleCount.textContent = count;
+      });
+    });
+  </script>
 </body>
 </html>

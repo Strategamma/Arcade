@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" role="img" aria-labelledby="title desc">
+  <title id="title">Scarlet Seal</title>
+  <desc id="desc">A cream envelope closed by a scarlet wax seal bearing a letter S.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#fff8e9"/>
+      <stop offset="1" stop-color="#e9cfaa"/>
+    </linearGradient>
+    <linearGradient id="wax" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#ff4b58"/>
+      <stop offset="1" stop-color="#9c1427"/>
+    </linearGradient>
+  </defs>
+  <path d="M52 75h316c13 0 24 11 24 24v142c0 13-11 24-24 24H52c-13 0-24-11-24-24V99c0-13 11-24 24-24Z" fill="#100909" opacity=".28" transform="translate(0 10)"/>
+  <rect x="28" y="75" width="364" height="190" rx="24" fill="url(#paper)"/>
+  <path d="m39 91 154 113c10 7 24 7 34 0L381 91" fill="#f6e4c9" stroke="#caa77c" stroke-width="5" stroke-linejoin="round"/>
+  <path d="m40 252 135-104M380 252 245 148" fill="none" stroke="#d6b68d" stroke-width="5" stroke-linecap="round"/>
+  <path d="M210 157c15-12 25-4 35 2 13-1 23 5 22 19 11 10 8 23-1 31 2 14-8 24-21 24-10 11-25 9-34 0-13 6-26-2-27-15-13-6-16-21-7-31-5-13 4-26 17-27 4-4 10-6 16-3Z" fill="url(#wax)" stroke="#7d1020" stroke-width="5"/>
+  <circle cx="222" cy="195" r="27" fill="none" stroke="#ff9a9f" stroke-width="3" opacity=".7"/>
+  <path d="M234 180c-5-5-21-6-23 2-3 12 24 7 21 20-2 9-18 10-26 3" fill="none" stroke="#ffe4d5" stroke-width="7" stroke-linecap="round"/>
+  <path d="M222 171v47" stroke="#ffe4d5" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+  <text x="210" y="48" text-anchor="middle" fill="#fff2df" font-family="Georgia, serif" font-size="30" font-weight="700" letter-spacing="8">SCARLET SEAL</text>
+</svg>
