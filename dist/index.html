@@ -8,7 +8,7 @@
   <title>Decadence Arcade — Game Night Lives Here</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Cormorant+Garamond:wght@700&amp;family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23030203'/%3E%3Cpath d='M19 15h18c9 0 15 7 15 17S46 49 37 49H19V15Zm11 10v14h6c4 0 6-3 6-7s-2-7-6-7h-6Z' fill='%23ff5667'/%3E%3Cpath d='M12 20h6v24h-6z' fill='%23ef233c'/%3E%3C/svg%3E">
   <style>
     :root {
@@ -113,14 +113,27 @@
     .status.live::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; box-shadow: 0 0 11px currentColor; }
     .players { color: rgba(255,255,255,.62); font-size: .76rem; white-space: nowrap; }
     .class-tag { display: inline-flex; align-items: center; min-height: 27px; margin-bottom: 10px; padding: 0 9px; color: var(--yellow); border: 1px solid rgba(255,184,77,.25); border-radius: 999px; background: rgba(255,184,77,.06); font-size: .66rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .device-tag { display: inline-flex; align-items: center; min-height: 27px; margin: 0 0 10px 6px; padding: 0 9px; color: #f4ded8; border: 1px solid rgba(244,222,216,.3); border-radius: 999px; background: rgba(244,222,216,.08); font-size: .66rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
     .game-art { height: 180px; display: grid; place-items: center; margin: 10px 0 2px; position: relative; }
     .game-art img { display: block; max-width: min(80%, 280px); max-height: 155px; filter: drop-shadow(0 20px 26px rgba(0,0,0,.45)); transition: transform .28s ease; }
     .cabinet:hover .game-art img { transform: scale(1.04) rotate(-1deg); }
-    .stackup .game-art img { width: 130px; }
-    .barrier .game-art img { width: 240px; max-width: 90%; }
-    .sakura .game-art img { width: 118px; }
-    .spies .game-art img { width: 205px; }
-    .scarlet .game-art img { width: 190px; }
+    .game-lockup { z-index: 1; display: flex; align-items: center; justify-content: center; gap: 12px; width: 100%; }
+    .game-lockup img { flex: 0 0 auto; width: 100px; max-width: none; max-height: 100px; }
+    .game-wordmark { display: block; color: var(--paper); text-shadow: 0 2px 0 #2a1714, 0 4px 0 #170e0d, 0 9px 14px rgba(0,0,0,.6); }
+    .stackup-wordmark { font: 400 clamp(1.35rem, 2.4vw, 1.8rem)/1 "Archivo Black", sans-serif; letter-spacing: -.055em; }
+    .stackup-wordmark span { color: #ffb84d; }
+    .barrier .game-lockup img, .spies .game-lockup img { width: 110px; max-height: 110px; }
+    .barrier-wordmark, .spies-wordmark { font: 400 clamp(1.15rem, 2vw, 1.4rem)/.95 "Archivo Black", sans-serif; letter-spacing: -.045em; text-transform: uppercase; }
+    .barrier-wordmark span, .spies-wordmark span { display: block; }
+    .barrier-wordmark span { color: #f5d68b; }
+    .spies-wordmark span { color: #91f2d0; font-size: .84em; letter-spacing: -.025em; }
+    .sakura .game-lockup { flex-direction: column; gap: 4px; }
+    .sakura .game-lockup img { width: 95px; max-height: 95px; }
+    .sakura-wordmark { font: 700 1.5rem/.82 "Cormorant Garamond", Georgia, serif; letter-spacing: .025em; text-align: center; text-transform: uppercase; }
+    .sakura-wordmark span { display: block; color: #f2a9bf; }
+    .scarlet .game-lockup img { width: 105px; max-height: 105px; }
+    .scarlet-wordmark { font: 700 clamp(1.4rem, 2.5vw, 1.8rem)/.85 "Cormorant Garamond", Georgia, serif; letter-spacing: .04em; text-transform: uppercase; }
+    .scarlet-wordmark span { display: block; color: #f3c778; }
     .orb { position: absolute; width: 175px; height: 175px; border-radius: 50%; filter: blur(1px); opacity: .45; background: radial-gradient(circle at 40% 35%, white, var(--pink) 20%, transparent 67%); }
     .stackup .orb { background: radial-gradient(circle at 40% 35%, white, var(--yellow) 20%, transparent 67%); }
     .barrier .orb { background: radial-gradient(circle at 40% 35%, white, var(--blue) 20%, transparent 67%); }
@@ -185,6 +198,10 @@
       .players { font-size: .7rem; }
       .game-art { height: 145px; margin-top: 8px; }
       .game-art img { max-height: 125px; }
+      .game-lockup img { width: 86px; max-height: 86px; }
+      .barrier .game-lockup img, .spies .game-lockup img { width: 95px; max-height: 95px; }
+      .scarlet .game-lockup img { width: 95px; max-height: 95px; }
+      .barrier-wordmark, .spies-wordmark { font-size: 1.08rem; }
       .orb { width: 140px; height: 140px; }
       .game-title { font-size: 1.9rem; }
       .game-blurb { font-size: .88rem; line-height: 1.45; }
@@ -260,7 +277,7 @@
       <div class="cabinet-grid">
         <article class="cabinet stackup" data-category="party">
           <div class="cabinet-top"><span class="status live">Live now</span><span class="players">2–8 players</span></div>
-          <div class="game-art"><span class="orb" aria-hidden="true"></span><img src="assets/stackup.svg" alt="StackUp game mark"></div>
+          <div class="game-art"><span class="orb" aria-hidden="true"></span><div class="game-lockup"><img src="assets/stackup-3d.webp" alt=""><span class="game-wordmark stackup-wordmark" aria-hidden="true">Stack<span>Up</span></span></div></div>
           <div class="game-info">
             <span class="class-tag">Party</span>
             <h3 class="game-title">StackUp</h3>
@@ -271,7 +288,7 @@
 
         <article class="cabinet barrier" data-category="duel">
           <div class="cabinet-top"><span class="status live">Live now</span><span class="players">1–2 players</span></div>
-          <div class="game-art"><span class="orb" aria-hidden="true"></span><img src="assets/barrier-knights.svg" alt="Barrier Knights logo"></div>
+          <div class="game-art"><span class="orb" aria-hidden="true"></span><div class="game-lockup"><img src="assets/barrier-knights-3d.webp" alt=""><span class="game-wordmark barrier-wordmark" aria-hidden="true">Barrier<span>Knights</span></span></div></div>
           <div class="game-info">
             <span class="class-tag">Duel</span>
             <h3 class="game-title">Barrier Knights</h3>
@@ -282,9 +299,9 @@
 
         <article class="cabinet sakura" data-category="duel">
           <div class="cabinet-top"><span class="status live">Live now</span><span class="players">1–2 players</span></div>
-          <div class="game-art"><span class="orb" aria-hidden="true"></span><img src="assets/sakura.svg" alt="Sakura Showdown flower mark"></div>
+          <div class="game-art"><span class="orb" aria-hidden="true"></span><div class="game-lockup"><img src="assets/sakura-3d.webp" alt=""><span class="game-wordmark sakura-wordmark" aria-hidden="true">Sakura<span>Showdown</span></span></div></div>
           <div class="game-info">
-            <span class="class-tag">Duel</span>
+            <span class="class-tag">Duel</span><span class="device-tag">Best on PC</span>
             <h3 class="game-title">Sakura Showdown</h3>
             <p class="game-blurb">Five pieces. Five cards. One perfect move. A tactical duel of shifting techniques and sudden victories.</p>
             <div class="game-bottom"><a class="play" href="https://strategamma.github.io/SakuraShowdown/">Play Sakura Showdown</a><span class="genre">Tactics · Solo, local &amp; online</span></div>
@@ -293,7 +310,7 @@
 
         <article class="cabinet spies" data-category="duel">
           <div class="cabinet-top"><span class="status live">Live now</span><span class="players">2 players</span></div>
-          <div class="game-art"><span class="orb" aria-hidden="true"></span><img src="assets/spies-in-disguise.svg" alt="Spies in Disguise game mark"></div>
+          <div class="game-art"><span class="orb" aria-hidden="true"></span><div class="game-lockup"><img src="assets/spies-in-disguise-3d.webp" alt=""><span class="game-wordmark spies-wordmark" aria-hidden="true">Spies<span>in Disguise</span></span></div></div>
           <div class="game-info">
             <span class="class-tag">Duel</span>
             <h3 class="game-title">Spies in Disguise</h3>
@@ -304,7 +321,7 @@
 
         <article class="cabinet scarlet" data-category="party">
           <div class="cabinet-top"><span class="status live">Live now</span><span class="players">1–6 players</span></div>
-          <div class="game-art"><span class="orb" aria-hidden="true"></span><img src="assets/scarlet-seal.svg" alt="Scarlet Seal wax seal and envelope mark"></div>
+          <div class="game-art"><span class="orb" aria-hidden="true"></span><div class="game-lockup"><img src="assets/scarlet-seal.png" alt=""><span class="game-wordmark scarlet-wordmark" aria-hidden="true">Scarlet<span>Seal</span></span></div></div>
           <div class="game-info">
             <span class="class-tag">Party</span>
             <h3 class="game-title">Scarlet Seal</h3>
