@@ -107,6 +107,7 @@
     .cabinet.sakura { background: linear-gradient(145deg, #3c1e22, #130a0b); }
     .cabinet.spies { background: linear-gradient(145deg, #32171a, #0e0808); }
     .cabinet.scarlet { background: linear-gradient(145deg, #4a171b, #150908); }
+    .cabinet.bones { background: linear-gradient(145deg, #352530, #100b11); }
     .cabinet-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; position: relative; z-index: 2; }
     .status { display: inline-flex; align-items: center; gap: 8px; min-height: 32px; padding: 0 11px; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; color: #dcd8e6; background: rgba(7,6,13,.25); font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
     .status.live { color: #85ffbd; }
@@ -134,6 +135,7 @@
     .scarlet .game-lockup img { width: 105px; max-height: 105px; }
     .scarlet-wordmark { font: 700 clamp(1.4rem, 2.5vw, 1.8rem)/.85 "Cormorant Garamond", Georgia, serif; letter-spacing: .04em; text-transform: uppercase; }
     .scarlet-wordmark span { display: block; color: #f3c778; }
+    .bones .game-art img { width: min(90%, 275px); max-height: 145px; }
     .orb { position: absolute; width: 175px; height: 175px; border-radius: 50%; filter: blur(1px); opacity: .45; background: radial-gradient(circle at 40% 35%, white, var(--pink) 20%, transparent 67%); }
     .stackup .orb { background: radial-gradient(circle at 40% 35%, white, var(--yellow) 20%, transparent 67%); }
     .barrier .orb { background: radial-gradient(circle at 40% 35%, white, var(--blue) 20%, transparent 67%); }
@@ -228,6 +230,7 @@
           <a href="https://strategamma.github.io/SakuraShowdown/">Sakura Showdown</a>
           <a href="https://strategamma.github.io/SpiesInDisguise/">Spies in Disguise</a>
           <a href="https://scarlet-seal.onrender.com/">Scarlet Seal</a>
+          <a href="https://strategamma.github.io/Bones/">Bones</a>
         </div>
       </details>
       <a class="nav-link" href="#about">About</a>
@@ -271,7 +274,7 @@
           <button class="filter" type="button" data-filter="table" aria-pressed="false">Table · 3–5</button>
           <button class="filter" type="button" data-filter="party" aria-pressed="false">Party · 6+</button>
         </div>
-        <p class="catalog-count" aria-live="polite"><span id="visible-count">5</span> games shown</p>
+        <p class="catalog-count" aria-live="polite"><span id="visible-count">6</span> games shown</p>
       </div>
 
       <div class="cabinet-grid">
@@ -327,6 +330,17 @@
             <h3 class="game-title">Scarlet Seal</h3>
             <p class="game-blurb">Carry a secret through the court, read your rivals, and protect the one card that could win—or expose—you. Play solo with bots or gather a room on the same Wi-Fi.</p>
             <div class="game-bottom"><a class="play" href="https://scarlet-seal.onrender.com/">Play Scarlet Seal</a><span class="genre">Cards · Same-Wi-Fi</span></div>
+          </div>
+        </article>
+
+        <article class="cabinet bones" data-category="party">
+          <div class="cabinet-top"><span class="status">Preview</span><span class="players">3–6 players</span></div>
+          <div class="game-art"><span class="orb" aria-hidden="true"></span><img src="assets/bones-platform-logo.png" alt="Bones game logo"></div>
+          <div class="game-info">
+            <span class="class-tag">Party</span>
+            <h3 class="game-title">Bones</h3>
+            <p class="game-blurb">Lay down your disc, raise the bid, and reveal the stacks. Find flowers, avoid skulls, and win two challenges.</p>
+            <div class="game-bottom"><a class="play" href="https://strategamma.github.io/Bones/">Play Bones</a><span class="genre">Bluffing · LAN &amp; Internet tables</span></div>
           </div>
         </article>
       </div>
