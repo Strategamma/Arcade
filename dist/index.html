@@ -108,6 +108,7 @@
     .cabinet.spies { background: linear-gradient(145deg, #32171a, #0e0808); }
     .cabinet.scarlet { background: linear-gradient(145deg, #4a171b, #150908); }
     .cabinet.bones { background: linear-gradient(145deg, #352530, #100b11); }
+    .cabinet.space-case { background: linear-gradient(145deg, #153541, #080d17); }
     .cabinet-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; position: relative; z-index: 2; }
     .status { display: inline-flex; align-items: center; gap: 8px; min-height: 32px; padding: 0 11px; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; color: #dcd8e6; background: rgba(7,6,13,.25); font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
     .status.live { color: #85ffbd; }
@@ -230,6 +231,7 @@
           <a href="https://strategamma.github.io/SakuraShowdown/">Sakura Showdown</a>
           <a href="https://strategamma.github.io/SpiesInDisguise/">Spies in Disguise</a>
           <a href="https://scarlet-seal.onrender.com/">Scarlet Seal</a>
+          <a href="#space-case">Space Case · Coming soon</a>
           <a href="https://strategamma.github.io/Bones/">Bones</a>
         </div>
       </details>
@@ -274,7 +276,7 @@
           <button class="filter" type="button" data-filter="table" aria-pressed="false">Table · 3–5</button>
           <button class="filter" type="button" data-filter="party" aria-pressed="false">Party · 6+</button>
         </div>
-        <p class="catalog-count" aria-live="polite"><span id="visible-count">6</span> games shown</p>
+        <p class="catalog-count" aria-live="polite"><span id="visible-count">7</span> games shown</p>
       </div>
 
       <div class="cabinet-grid">
@@ -341,6 +343,17 @@
             <h3 class="game-title">Bones</h3>
             <p class="game-blurb">Lay down your disc, raise the bid, and reveal the stacks. Find flowers, avoid skulls, and win two challenges.</p>
             <div class="game-bottom"><a class="play" href="https://strategamma.github.io/Bones/">Play Bones</a><span class="genre">Bluffing · LAN &amp; Internet tables</span></div>
+          </div>
+        </article>
+
+        <article class="cabinet space-case" id="space-case" data-category="party">
+          <div class="cabinet-top"><span class="status">Coming soon</span><span class="players">6–15 players</span></div>
+          <div class="game-art"><img src="assets/space-case.svg" alt="Space Case ringed planet mark"></div>
+          <div class="game-info">
+            <span class="class-tag">Party</span>
+            <h3 class="game-title">Space Case</h3>
+            <p class="game-blurb">Your crew. Your suspicions. One very wrong spaceship. A face-to-face social deduction game.</p>
+            <div class="game-bottom"><a class="play" href="https://github.com/Strategamma/Space-Case/" aria-label="View Space Case repository">View project</a><span class="genre">Social deduction</span></div>
           </div>
         </article>
       </div>
