@@ -12,6 +12,7 @@
   - Spies in Disguise: `https://strategamma.github.io/SpiesInDisguise/`
   - Scarlet Seal: `https://scarlet-seal.onrender.com/` (Render free service; initial wake may be slow)
   - Bones: `https://strategamma.github.io/Bones/` (3–6-player bluffing game; LAN and internet tables use separate servers)
+  - Heir of Despair: `https://heir-of-despair.onrender.com/` (4–10-player same-room social deduction; hosted mode requires Internet)
 - Scarlet Seal (`https://github.com/Strategamma/Scarlet-Seal`) is a Love Letter-inspired hidden-information game for 1–6 players with bots and same-Wi-Fi rooms.
 - Game cards use `.status.live` and `.play` links. Keep the header's live-game count aligned with enabled cards.
 - Catalog capacity classes use each game's maximum table size: `duel` for two-player games, `table` for 3–5, and `party` for 6+. Cards carry `data-category`; the accessible filter controls depend on it.

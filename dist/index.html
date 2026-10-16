@@ -109,6 +109,9 @@
     .cabinet.scarlet { background: linear-gradient(145deg, #4a171b, #150908); }
     .cabinet.bones { background: linear-gradient(145deg, #352530, #100b11); }
     .cabinet.space-case { background: linear-gradient(145deg, #32171a, #0e0808); }
+    .cabinet.heir { background: linear-gradient(145deg, #35201e, #100b0a); }
+    .heir .game-art img { width: min(85%, 230px); max-height: 155px; object-fit: contain; }
+    .heir .orb { background: radial-gradient(circle at 40% 35%, #ffe2a0, #a42b35 25%, transparent 68%); }
     .space-case .game-lockup { position: relative; z-index: 1; display: flex; align-items: center; justify-content: center; gap: 12px; width: 100%; }
     .space-case .game-lockup .space-case-logo { width: 100px; max-width: 38%; max-height: 110px; object-fit: contain; }
     .space-case .game-lockup .space-case-wordmark { width: 150px; max-width: 55%; height: auto; object-fit: contain; }
@@ -238,10 +241,11 @@
           <a href="https://scarlet-seal.onrender.com/">Scarlet Seal</a>
           <a href="https://space-case-ygl3.onrender.com/">Space Case</a>
           <a href="https://strategamma.github.io/Bones/">Bones</a>
+          <a href="https://heir-of-despair.onrender.com/">Heir of Despair</a>
         </div>
       </details>
       <a class="nav-link" href="#about">About</a>
-      <span class="live-pill"><span class="live-dot"></span><span>7 games live</span></span>
+      <span class="live-pill"><span class="live-dot"></span><span>8 games live</span></span>
     </nav>
   </header>
 
@@ -281,7 +285,7 @@
           <button class="filter" type="button" data-filter="table" aria-pressed="false" hidden>Table · 3–5</button>
           <button class="filter" type="button" data-filter="party" aria-pressed="false">Party · 6+</button>
         </div>
-        <p class="catalog-count" aria-live="polite"><span id="visible-count">7</span> games shown</p>
+        <p class="catalog-count" aria-live="polite"><span id="visible-count">8</span> games shown</p>
       </div>
 
       <div class="cabinet-grid">
@@ -359,6 +363,17 @@
             <h3 class="game-title">Space Case</h3>
             <p class="game-blurb">Your crew. Your suspicions. One very wrong spaceship. A face-to-face social deduction game.</p>
             <div class="game-bottom"><a class="play" href="https://space-case-ygl3.onrender.com/">Play Space Case</a><span class="genre">Bluffing · In-person · Internet required</span></div>
+          </div>
+        </article>
+
+        <article class="cabinet heir" data-category="party">
+          <div class="cabinet-top"><span class="status live">Live now</span><span class="players">4–10 players</span></div>
+          <div class="game-art"><span class="orb" aria-hidden="true"></span><img src="assets/heir-of-despair-wordmark.png" alt="Heir of Despair crown and dagger wordmark"></div>
+          <div class="game-info">
+            <span class="class-tag">Party</span>
+            <h3 class="game-title">Heir of Despair</h3>
+            <p class="game-blurb">Draft your moves, conceal your allegiance, and outmaneuver rival houses for the throne.</p>
+            <div class="game-bottom"><a class="play" href="https://heir-of-despair.onrender.com/">Play Heir of Despair</a><span class="genre">Social deduction · Same-room · Internet required</span></div>
           </div>
         </article>
       </div>
