@@ -109,7 +109,11 @@
     .cabinet.scarlet { background: linear-gradient(145deg, #4a171b, #150908); }
     .cabinet.bones { background: linear-gradient(145deg, #352530, #100b11); }
     .cabinet.space-case { background: linear-gradient(145deg, #32171a, #0e0808); }
-    .space-case .space-case-wordmark { display: block; width: min(100%, 240px); height: auto; }
+    .space-case .game-lockup { position: relative; z-index: 1; display: flex; align-items: center; justify-content: center; gap: 12px; width: 100%; }
+    .space-case .game-lockup .space-case-logo { width: 100px; max-width: 38%; max-height: 110px; object-fit: contain; }
+    .space-case .game-lockup .space-case-wordmark { width: 150px; max-width: 55%; height: auto; object-fit: contain; }
+    .space-case .orb { background: radial-gradient(circle at 40% 35%, #ffd8dc, #a10e27 24%, transparent 68%); }
+    .filter[hidden] { display: none; }
     .cabinet-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; position: relative; z-index: 2; }
     .status { display: inline-flex; align-items: center; gap: 8px; min-height: 32px; padding: 0 11px; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; color: #dcd8e6; background: rgba(7,6,13,.25); font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
     .status.live { color: #85ffbd; }
@@ -274,7 +278,7 @@
         <div class="filters" role="group" aria-label="Filter games by player count">
           <button class="filter" type="button" data-filter="all" aria-pressed="true">All games</button>
           <button class="filter" type="button" data-filter="duel" aria-pressed="false">Duel · 2 players</button>
-          <button class="filter" type="button" data-filter="table" aria-pressed="false">Table · 3–5</button>
+          <button class="filter" type="button" data-filter="table" aria-pressed="false" hidden>Table · 3–5</button>
           <button class="filter" type="button" data-filter="party" aria-pressed="false">Party · 6+</button>
         </div>
         <p class="catalog-count" aria-live="polite"><span id="visible-count">7</span> games shown</p>
@@ -349,12 +353,12 @@
 
         <article class="cabinet space-case" id="space-case" data-category="party">
           <div class="cabinet-top"><span class="status live">Live now</span><span class="players">6–15 players</span></div>
-          <div class="game-art"><img src="assets/space-case-logo.webp" alt="Space Case creature riding a spaceship past a cosmic vortex"></div>
+          <div class="game-art"><span class="orb" aria-hidden="true"></span><div class="game-lockup"><img class="space-case-logo" src="assets/space-case-logo.webp" alt=""><img class="space-case-wordmark" src="assets/space-case-wordmark.webp" alt="Space Case"></div></div>
           <div class="game-info">
-            <span class="class-tag">Party</span>
-            <h3 class="game-title"><img class="space-case-wordmark" src="assets/space-case-wordmark.webp" alt="Space Case"></h3>
+            <span class="class-tag">Party</span> <span class="class-tag">Social deduction</span> <span class="class-tag">Hidden roles</span>
+            <h3 class="game-title">Space Case</h3>
             <p class="game-blurb">Your crew. Your suspicions. One very wrong spaceship. A face-to-face social deduction game.</p>
-            <div class="game-bottom"><a class="play" href="https://space-case-ygl3.onrender.com/">Play Space Case</a><span class="genre">Social deduction</span></div>
+            <div class="game-bottom"><a class="play" href="https://space-case-ygl3.onrender.com/">Play Space Case</a><span class="genre">Bluffing · In-person · Internet required</span></div>
           </div>
         </article>
       </div>
