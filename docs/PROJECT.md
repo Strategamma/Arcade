@@ -17,4 +17,4 @@
 - Catalog capacity classes use each game's maximum table size: `duel` for two-player games, `table` for 3–5, and `party` for 6+. Cards carry `data-category`; the accessible filter controls depend on it.
 - This checkout may have read-only `.git` metadata. If the remote cannot be saved locally, clone the canonical repository into a writable checkout before committing or pushing; do not publish through ChatGPT Sites.
 
-- Space Case is staged as Coming soon (6–15 players, social deduction), linked to `https://github.com/Strategamma/Space-Case/`; its repository reports deployment pending. Verify the live URL and mobile game flow before enabling play.
+- Space Case: `https://space-case-ygl3.onrender.com/`, 6–15 player social deduction. Card uses the game’s official logo and wordmark. Health/homepage verified; physical-device and hosted restart/recovery QA remain open. Current file storage may lose rooms/points on Render restarts.
