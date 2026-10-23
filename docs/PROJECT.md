@@ -19,3 +19,5 @@
 - This checkout may have read-only `.git` metadata. If the remote cannot be saved locally, clone the canonical repository into a writable checkout before committing or pushing; do not publish through ChatGPT Sites.
 
 - Space Case: `https://space-case-ygl3.onrender.com/`, 6–15 player social deduction. Card uses the official logo beside its wordmark over a red glow, with a plain-text title. Health/homepage verified; physical-device and hosted restart/recovery QA remain open. Current file storage may lose rooms/points on Render restarts.
+
+- Skull King: `https://skull-king2.onrender.com/`, 2–10 players, bidding/trick-taking with private rooms and bots. Homepage and `/healthz` verified; full hosted match, physical-phone and installed-PWA QA remain open.

@@ -108,6 +108,9 @@
     .cabinet.spies { background: linear-gradient(145deg, #32171a, #0e0808); }
     .cabinet.scarlet { background: linear-gradient(145deg, #4a171b, #150908); }
     .cabinet.bones { background: linear-gradient(145deg, #352530, #100b11); }
+    .cabinet.skull-king { background: linear-gradient(145deg, #153c3c, #080f13); }
+    .skull-king .game-art img { width: min(90%, 280px); height: auto; object-fit: contain; }
+    .skull-king .orb { background: radial-gradient(circle at 40% 35%, #fff0d2, #c19a45 24%, transparent 68%); }
     .cabinet.space-case { background: linear-gradient(145deg, #32171a, #0e0808); }
     .cabinet.heir { background: linear-gradient(145deg, #35201e, #100b0a); }
     .heir .game-art img { width: min(85%, 230px); max-height: 155px; object-fit: contain; }
@@ -242,10 +245,11 @@
           <a href="https://space-case-ygl3.onrender.com/">Space Case</a>
           <a href="https://strategamma.github.io/Bones/">Bones</a>
           <a href="https://heir-of-despair.onrender.com/">Heir of Despair</a>
+          <a href="https://skull-king2.onrender.com/">Skull King</a>
         </div>
       </details>
       <a class="nav-link" href="#about">About</a>
-      <span class="live-pill"><span class="live-dot"></span><span>8 games live</span></span>
+      <span class="live-pill"><span class="live-dot"></span><span>9 games live</span></span>
     </nav>
   </header>
 
@@ -285,7 +289,7 @@
           <button class="filter" type="button" data-filter="table" aria-pressed="false" hidden>Table · 3–5</button>
           <button class="filter" type="button" data-filter="party" aria-pressed="false">Party · 6+</button>
         </div>
-        <p class="catalog-count" aria-live="polite"><span id="visible-count">8</span> games shown</p>
+        <p class="catalog-count" aria-live="polite"><span id="visible-count">9</span> games shown</p>
       </div>
 
       <div class="cabinet-grid">
@@ -374,6 +378,17 @@
             <h3 class="game-title">Heir of Despair</h3>
             <p class="game-blurb">Draft your moves, conceal your allegiance, and outmaneuver rival houses for the throne.</p>
             <div class="game-bottom"><a class="play" href="https://heir-of-despair.onrender.com/">Play Heir of Despair</a><span class="genre">Social deduction · Same-room · Internet required</span></div>
+          </div>
+        </article>
+
+        <article class="cabinet skull-king" id="skull-king" data-category="party">
+          <div class="cabinet-top"><span class="status live">Live now</span><span class="players">2–10 players</span></div>
+          <div class="game-art"><span class="orb" aria-hidden="true"></span><img src="assets/skull-king-wordmark.png" alt="Skull King 3D pirate wordmark" width="1000" height="666"></div>
+          <div class="game-info">
+            <span class="class-tag">Party</span> <span class="class-tag">Trick-taking</span>
+            <h3 class="game-title">Skull King</h3>
+            <p class="game-blurb">Bid how many tricks you’ll win, then steer through pirates, mermaids, and sea monsters. Hit your bid to claim the treasure.</p>
+            <div class="game-bottom"><a class="play" href="https://skull-king2.onrender.com/">Play Skull King</a><span class="genre">Card strategy · Private rooms · Bots</span></div>
           </div>
         </article>
       </div>
