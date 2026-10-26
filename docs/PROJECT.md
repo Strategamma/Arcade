@@ -22,4 +22,5 @@
 
 - Skull King: `https://skull-king2.onrender.com/`, 2–10 players, bidding/trick-taking with private rooms and bots. Homepage and `/healthz` verified; full hosted match, physical-phone and installed-PWA QA remain open.
 
+- Approved app icon: ivory retro D with red/gold layers; `arcade-retro-*` includes mask-safe artwork.
 - Arcade PWA: `dist/manifest.webmanifest`, `pwa.js`, and `sw.js`; install help supports browser prompts and manual home-screen installation. Caches catalog/artwork only; hosted games need connectivity. Bump the scoped service-worker cache version when changing shell assets; updates activate after existing tabs close.

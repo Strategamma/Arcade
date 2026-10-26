@@ -1,11 +1,14 @@
-const CACHE = 'decadence-arcade-v5';
+const CACHE = 'decadence-arcade-v6';
 const SHELL = [
   "./",
   "./index.html",
   "./pwa.js",
   "./manifest.webmanifest",
-  "./assets/arcade-192.png",
-  "./assets/arcade-512.png",
+  "./assets/arcade-retro-32.png",
+  "./assets/arcade-retro-180.png",
+  "./assets/arcade-retro-192.png",
+  "./assets/arcade-retro-512.png",
+  "./assets/arcade-retro-maskable-512.png",
   "./assets/barrier-knights-3d.webp",
   "./assets/bones-platform-logo.png",
   "./assets/heir-of-despair-wordmark.png",
