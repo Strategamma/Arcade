@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#120d0c">
   <meta name="description" content="Decadence Arcade is bringing LAN gaming back—gather in one place, join the same network, and play together.">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./assets/arcade-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Decadence">
+  <script src="./pwa.js" defer></script>
   <title>Decadence Arcade — Game Night Lives Here</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -227,6 +232,32 @@
       html { scroll-behavior: auto; }
       *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
     }
+    .nav-install { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; border: 1px solid rgba(255,184,77,.28); color: var(--yellow); background: transparent; font: 700 .85rem "DM Sans", sans-serif; cursor: pointer; white-space: nowrap; }
+    .nav-install:hover, .nav-install:focus-visible { color: var(--yellow); background: rgba(255,184,77,.08); outline: 2px solid var(--yellow); outline-offset: 2px; }
+    .nav-install svg { flex: 0 0 auto; }
+    @media (max-width: 720px) {
+      .topbar { height: auto; min-height: 68px; flex-wrap: wrap; padding-block: 14px; gap: 12px; }
+      .topbar nav { flex-wrap: wrap; gap: 6px; }
+      .nav-install { display: inline-flex; }
+    }
+    @media (display-mode: standalone), (display-mode: minimal-ui), (display-mode: fullscreen) {
+      #install-arcade { display: none; }
+    }
+    [hidden] { display: none !important; }
+    .connection-status { padding: 12px 16px; border: 1px solid var(--yellow); border-radius: 8px; }
+    .install-dialog { width: min(480px, calc(100% - 32px)); max-height: calc(100dvh - 32px); overflow-y: auto; padding: clamp(20px, 5vw, 30px); border: 1px solid rgba(255,184,77,.5); border-radius: 16px; color: var(--paper); background: radial-gradient(circle at top right, #67262b55, transparent 65%), #1c1211; box-shadow: 6px 6px 0 #8f2531, 0 24px 80px #000a; font: 500 .95rem/1.55 "DM Sans", system-ui, sans-serif; }
+    .install-dialog::backdrop { background: #080505d9; backdrop-filter: blur(5px); }
+    .install-dialog .kicker { font-size: .65rem; letter-spacing: .14em; }
+    .install-dialog h2 { margin: 18px 0 22px; font: 400 clamp(1.8rem, 7vw, 2.5rem)/1 "Archivo Black", sans-serif; letter-spacing: -.045em; text-transform: uppercase; }
+    .install-steps { display: grid; gap: 12px; }
+    .install-step { padding: 14px 16px; background: #120d0c99; border: 1px solid #ffb84d26; border-radius: 8px; }
+    .install-step h3 { margin: 0 0 6px; color: var(--yellow); font-size: .8rem; letter-spacing: .07em; text-transform: uppercase; }
+    .install-step p { margin: 0; color: #cdbeb5; }
+    .install-step strong { color: var(--paper); font-weight: 700; }
+    .install-note { margin: 18px 0 22px; color: var(--muted); font-size: .8rem; }
+    .install-dialog form { margin: 0 6px 6px 0; }
+    .install-dialog .coin-button { width: 100%; justify-content: center; min-height: 48px; cursor: pointer; }
+    .install-dialog .coin-button:focus-visible { outline: 2px solid var(--paper); outline-offset: 4px; }
   </style>
 </head>
 <body>
@@ -249,6 +280,7 @@
         </div>
       </details>
       <a class="nav-link" href="#about">About</a>
+      <button class="nav-link nav-install" id="install-arcade" type="button" hidden><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 16v5h16v-5"/></svg>Install arcade</button>
       <span class="live-pill"><span class="live-dot"></span><span>9 games live</span></span>
     </nav>
   </header>
@@ -400,6 +432,27 @@
     </section>
   </main>
 
+  <p class="shell connection-status" id="connection-status" role="status" hidden>You're offline. You can browse the saved arcade; opening hosted games requires a connection.</p>
+  <dialog class="install-dialog" id="install-dialog" aria-labelledby="install-dialog-title">
+    <div class="kicker">Your home-screen arcade</div>
+    <h2 id="install-dialog-title">Keep game<br>night close.</h2>
+    <div class="install-steps">
+      <section class="install-step" aria-labelledby="install-apple">
+        <h3 id="install-apple">01 / iPhone &amp; iPad</h3>
+        <p>Open in <strong>Safari</strong>. Tap <strong>Share → Add to Home Screen</strong>. Turn on <strong>Open as Web App</strong> if offered.</p>
+      </section>
+      <section class="install-step" aria-labelledby="install-android">
+        <h3 id="install-android">02 / Android</h3>
+        <p>Open your browser menu. Choose <strong>Install app</strong> or <strong>Add to Home screen</strong>.</p>
+      </section>
+      <section class="install-step" aria-labelledby="install-desktop">
+        <h3 id="install-desktop">03 / Desktop</h3>
+        <p>Look for <strong>Install</strong> in the address bar or browser menu. If unavailable, bookmark the arcade.</p>
+      </section>
+    </div>
+    <p class="install-note">Browse your saved arcade offline. Hosted games still need a connection.</p>
+    <form method="dialog"><button class="coin-button">Got it — let’s play</button></form>
+  </dialog>
   <footer class="shell">
     <span><strong>Decadence Arcade.</strong> The platform bringing LAN gaming back.</span>
     <span class="key-hint"><kbd>↑</kbd><kbd>↓</kbd> explore</span>

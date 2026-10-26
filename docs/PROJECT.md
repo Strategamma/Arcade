@@ -21,3 +21,5 @@
 - Space Case: `https://space-case-ygl3.onrender.com/`, 6–15 player social deduction. Card uses the official logo beside its wordmark over a red glow, with a plain-text title. Health/homepage verified; physical-device and hosted restart/recovery QA remain open. Current file storage may lose rooms/points on Render restarts.
 
 - Skull King: `https://skull-king2.onrender.com/`, 2–10 players, bidding/trick-taking with private rooms and bots. Homepage and `/healthz` verified; full hosted match, physical-phone and installed-PWA QA remain open.
+
+- Arcade PWA: `dist/manifest.webmanifest`, `pwa.js`, and `sw.js`; install help supports browser prompts and manual home-screen installation. Caches catalog/artwork only; hosted games need connectivity. Bump the scoped service-worker cache version when changing shell assets; updates activate after existing tabs close.
