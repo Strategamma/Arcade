@@ -1,20 +1,14 @@
 # Goal
-Make Scarlet Seal playable from the arcade using its verified production deployment.
+Add Daily 10 as a separate Decadence Inc. product.
 
 # Scope
-- Preserve the responsive catalog and other game links.
-- Promote Scarlet Seal from development to live.
-- Keep its capacity classification aligned with the current six-seat game.
+Dedicated Android landing page, site navigation, download information, existing privacy policy.
 
 # Approach
-- Verify the production health endpoint and homepage.
-- Point the card and navigation directly to the live Render service.
-- Reclassify Scarlet Seal as Party because the current repository supports six seats.
+Keep the static GitHub Pages architecture. Reuse the Android wordmark and supplied privacy page. Keep Daily 10 outside the arcade catalog. Await real download links; show an explicit unavailable state in the meantime.
 
 # Risks
-- The Render free service can have a noticeable cold-start delay.
-- The intended custom domain is not yet resolvable, so use the verified Render URL.
+Download URLs are pending. Do not imply a browser app or publish invented store links. Existing app policy describes disabled purchases and must change if the app changes.
 
 # Verification
-- Run Scarlet Seal's tests and production build.
-- Verify its live health/page response plus arcade links, live count, and Party classification.
+Verified desktop and 320/390px browser layouts, standalone privacy page and return link, all local targets/assets, unchanged nine-game catalog, service-worker syntax, and git diff whitespace. Download URLs pending; changes remain local.

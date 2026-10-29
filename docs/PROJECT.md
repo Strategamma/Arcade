@@ -24,3 +24,5 @@
 
 - Approved app icon: ivory retro D with red/gold layers; `arcade-retro-*` includes mask-safe artwork.
 - Arcade PWA: `dist/manifest.webmanifest`, `pwa.js`, and `sw.js`; install help supports browser prompts and manual home-screen installation. Caches catalog/artwork only; hosted games need connectivity. Bump the scoped service-worker cache version when changing shell assets; updates activate after existing tabs close.
+
+- Daily 10 is a separate Android product at `dist/daily10/index.html`, linked from the main navigation, outside the arcade catalog. Privacy: `dist/daily10/privacy.html`, copied from the Android project. No browser app; download URLs pending. Reuse its existing wordmark; update the policy when app data handling changes.

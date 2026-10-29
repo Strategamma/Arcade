@@ -1,4 +1,4 @@
-const CACHE = 'decadence-arcade-v6';
+const CACHE = 'decadence-arcade-v7';
 const SHELL = [
   "./",
   "./index.html",

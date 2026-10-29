@@ -258,6 +258,9 @@
     .install-dialog form { margin: 0 6px 6px 0; }
     .install-dialog .coin-button { width: 100%; justify-content: center; min-height: 48px; cursor: pointer; }
     .install-dialog .coin-button:focus-visible { outline: 2px solid var(--paper); outline-offset: 4px; }
+    .product-tab { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; white-space: nowrap; }
+    .product-tab[aria-current="page"] { color: var(--yellow); background: rgba(255,184,77,.09); }
+    @media (max-width: 1000px) { .topbar { height: auto; min-height: 78px; flex-wrap: wrap; gap: 12px; padding-block: 14px; } .topbar nav { flex-wrap: wrap; } }
   </style>
 </head>
 <body>
@@ -265,6 +268,8 @@
   <header class="shell topbar">
     <a class="brand" href="#top" aria-label="Decadence Inc. home"><span class="brand-mark">D</span><span>Decadence Inc.</span></a>
     <nav aria-label="Main navigation">
+      <a class="nav-link product-tab" href="./" aria-current="page">Arcade</a>
+      <a class="nav-link product-tab" href="./daily10/">Daily 10</a>
       <details class="game-menu">
         <summary class="nav-link">Play a game</summary>
         <div class="game-menu-links">
